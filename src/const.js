@@ -1,30 +1,60 @@
-export const EVENT_TYPES = [
-  'taxi', 'bus', 'train', 'ship', 'drive', 'flight', 'check-in', 'sightseeing', 'restaurant'
-];
-
-export const SORT_TYPE = {
-  DAY: 'day',
-  TIME: 'time',
-  PRICE: 'price'
+const FilterType = {
+  EVERYTHING: 'everything',
+  PRESENT: 'present',
+  FUTURE: 'future',
+  PAST: 'past'
 };
 
-export const UserAction = {
+const SortType = {
+  DAY: 'day',
+  TIME: 'time',
+  PRICE: 'price',
+  EVENT: 'event',
+  OFFER: 'offer'
+};
+
+const UserAction = {
   UPDATE_POINT: 'UPDATE_POINT',
   ADD_POINT: 'ADD_POINT',
   DELETE_POINT: 'DELETE_POINT',
 };
 
-export const UpdateType = {
+const UpdateType = {
   PATCH: 'PATCH',
   MINOR: 'MINOR',
   MAJOR: 'MAJOR',
   INIT: 'INIT',
-  ERROR: 'ERROR',
 };
 
-export const FilterType = {
-  EVERYTHING: 'everything',
-  FUTURE: 'future',
-  PRESENT: 'present',
-  PAST: 'past',
+const Point = {
+  TAXI: 'taxi',
+  BUS: 'bus',
+  TRAIN: 'train',
+  SHIP: 'ship',
+  DRIVE: 'drive',
+  FLIGHT: 'flight',
+  CHECK_IN: 'check-in',
+  SIGHTSEEING: 'sightseeing',
+  RESTAURANT: 'restaurant'
 };
+
+const PointDescription = {
+  [Point.TAXI]: 'Taxi',
+  [Point.BUS]: 'Bus',
+  [Point.TRAIN]: 'Train',
+  [Point.SHIP]: 'Ship',
+  [Point.DRIVE]: 'Drive',
+  [Point.FLIGHT]: 'Flight',
+  [Point.CHECK_IN]: 'Check-in',
+  [Point.SIGHTSEEING]: 'Sightseeing',
+  [Point.RESTAURANT]: 'Restaurant'
+};
+
+const ApiServiceResponse = {
+  GET: 'GET',
+  PUT: 'PUT',
+  POST: 'POST',
+  DELETE: 'DELETE',
+};
+
+export {FilterType, SortType, UserAction, UpdateType, Point, PointDescription, ApiServiceResponse};
